@@ -1,0 +1,12 @@
+[Unit]
+Description=read temperature of cpu core 
+After=network.target
+
+[Service]
+User=nibey
+Group=nibey
+WorkingDirectory=/home/nibey/scripts
+ExecStart=/usr/bin/python /home/nibey/scripts/readcoretemp.py > /dev/null 2>&1 &
+
+[Install]
+WantedBy=multi-user.target
