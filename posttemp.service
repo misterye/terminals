@@ -1,0 +1,12 @@
+[Unit]
+Description=post temperature to server
+After=network.target
+
+[Service]
+User=pi
+Group=pi
+ExecStart=/usr/bin/python /home/pi/terminals/post_temp.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

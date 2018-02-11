@@ -11,6 +11,13 @@ while True:
         print 'Connected!'
     else:
         print 'Disconnected!'
-        os.system('sudo reboot')
+        os.system('sudo systemctl restart openvpn')
+        sleep(5)
+        new_response = os.system('ping -c 10 10.8.0.1')
+        if new_response == 0:
+            print 'Connected!'
+        else:
+            print 'Disconnected!'
+            os.system('sudo reboot')
 
     sleep(3600)
