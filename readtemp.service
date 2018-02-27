@@ -1,0 +1,12 @@
+[Unit]
+Description=post temperature to server by paho-mqtt
+After=network.target
+
+[Service]
+User=pi
+Group=pi
+ExecStart=/usr/bin/python /home/pi/terminals/read_temp.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
