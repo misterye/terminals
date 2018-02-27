@@ -2,10 +2,10 @@
 import sys
 import Adafruit_DHT
 import paho.mqtt.client as mqtt
-import json
+#import json
 import os
 import time
-import requests
+#import requests
 
 MQTT_HOST = '111.47.20.166'
 # Data capture and upload interval in seconds. Less interval will eventually hang the DHT22.
@@ -23,8 +23,11 @@ try:
         temperature = round(temperature, 2)
         sensor_data['temperature'] = temperature
         sensor_data['humidity'] = humidity
-        client.publish('devices/raspi/temperature', json.dumps(sensor_data['temperature']), 1)
-        client.publish('devices/raspi/humidity', json.dumps(sensor_data['humidity']), 1)
+        #client.publish('devices/raspi/test01/temperature', json.dumps(sensor_data['temperature']), 1)
+        #client.publish('devices/raspi/test01/humidity', json.dumps(sensor_data['humidity']), 1)
+        client.publish('devices/raspi/gxgadzt/temperature', sensor_data['temperature'])
+        # if humidity needs to be monitored, publish it as a new topic
+        #client.publish('devices/raspi/gxgadzt/humidity', sensor_data['humidity'])
         next_reading += INTERVAL
         sleep_time = next_reading-time.time()
         if sleep_time > 0:

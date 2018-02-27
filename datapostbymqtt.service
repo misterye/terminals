@@ -1,0 +1,13 @@
+[Unit]
+Description=Post temperature data to server.
+After=network.target
+
+[Service]
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/scripts/terminals
+ExecStart=/usr/bin/python /home/pi/scripts/terminals/data_post_by_mqtt.py > /dev/null 2>&1 &
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
