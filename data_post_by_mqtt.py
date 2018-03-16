@@ -9,7 +9,7 @@ import time
 
 MQTT_HOST = '111.47.20.166'
 # Data capture and upload interval in seconds. Less interval will eventually hang the DHT22.
-INTERVAL = 2
+INTERVAL = 5
 sensor_data = {'temperature': 0, 'humidity':0}
 client = mqtt.Client()
 next_reading = time.time()
