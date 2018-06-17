@@ -1,0 +1,13 @@
+[Unit]
+Description=Heart Beat Client
+After=network.target
+
+[Service]
+User=test
+Group=test
+WorkingDirectory=/home/test/scripts/terminals
+ExecStart=/usr/bin/python /home/test/scripts/terminals/HeartbeatClient.py > /dev/null 2>&1 &
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
