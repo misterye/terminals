@@ -5,8 +5,9 @@ After=multi-user.target
 [Service]
 User=pi
 Group=pi
-ExecStart=/usr/bin/python /home/pi/scripts/terminals/pingtest.py > /dev/null 2>&1 &
-Restart=on-abort
+WorkingDirectory=/home/pi/scripts/terminals
+ExecStart=/usr/bin/python pingtest.py
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
