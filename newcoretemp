@@ -1,6 +1,6 @@
 radeon-pci-0100
 Adapter: PCI adapter
-temp1:        +47.5°C  (crit = +120.0°C, hyst = +90.0°C)
+temp1:        +47.0°C  (crit = +120.0°C, hyst = +90.0°C)
 
 coretemp-isa-0000
 Adapter: ISA adapter
@@ -18,10 +18,10 @@ in5:          +2.21 V  (min =  +2.71 V, max =  +0.20 V)  ALARM
 in6:          +2.21 V  (min =  +0.43 V, max =  +2.74 V)
 3VSB:         +3.26 V  (min =  +1.42 V, max =  +4.61 V)
 Vbat:         +3.22 V  
-fan1:         723 RPM  (min =   11 RPM)
-fan2:         946 RPM  (min =   50 RPM)
+fan1:         721 RPM  (min =   11 RPM)
+fan2:         942 RPM  (min =   50 RPM)
 fan3:           0 RPM  (min =   10 RPM)  ALARM
-temp1:        +37.0°C  (low  = -29.0°C, high =  +4.0°C)  ALARM  sensor = thermal diode
+temp1:        +36.0°C  (low  = -29.0°C, high =  +4.0°C)  ALARM  sensor = thermal diode
 temp2:       +119.0°C  (low  =  +2.0°C, high = +43.0°C)  ALARM  sensor = Intel PECI
 temp3:        +16.0°C  (low  = +66.0°C, high = -128.0°C)  ALARM  sensor = Intel PECI
 intrusion0:  OK
