@@ -1,0 +1,13 @@
+[Unit]
+Description=Ping VPN server every certain time.
+After=multi-user.target
+
+[Service]
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/scripts/terminals
+ExecStart=/usr/bin/python pingpost.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
