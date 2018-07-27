@@ -6,7 +6,7 @@ import time
 from time import sleep
 
 MQTT_HOST = '111.47.20.166'
-INTERVAL = 2
+INTERVAL = 5
 client = mqtt.Client()
 next_reading = time.time()
 client.connect(MQTT_HOST, 1883, 60)
