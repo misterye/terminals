@@ -17,7 +17,8 @@ try:
         lines = f.readlines()
         linestring = lines[6].split()
         tempstr = linestring[2][1:5]
-        tempnum = float(tempstr)-10
+        #tempnum = float(tempstr)-10
+        tempnum = float(tempstr)
         #newtempstr = str(tempnum)
         # if humidity needs to be monitored, publish it as a new topic
         #humidity = 30.0
